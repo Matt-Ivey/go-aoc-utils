@@ -62,11 +62,23 @@ Use the `GetInput` function to retrieve the puzzle input:
 ```go
 input, err := aocutils.GetInput()
 if err != nil {
+fmt.Println("Error fetching input:", err)
+return
+}
+fmt.Println("Puzzle Input:", input)
+```
+
+Use the `GetInputParms` function to retrieve the puzzle input:
+
+```go
+input, err := aocutils.GetInputParms("2024", "01")
+if err != nil {
     fmt.Println("Error fetching input:", err)
     return
 }
 fmt.Println("Puzzle Input:", input)
 ```
+
 
 ## License
 
